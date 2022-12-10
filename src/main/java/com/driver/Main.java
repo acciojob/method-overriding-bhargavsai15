@@ -1,20 +1,17 @@
 package com.driver;
-
-public class Main {
-  public  static class A{
+    class A{
     public String meth(){
-        return "This is parent class";
+        return "Invoking meth method from class A";
     }
   }
 
-  public static class B extends A{
-      public  String  meth(){
-          return "class B extends class A method";
-      }
+  class B extends A{
+
   }
 
+  public  class Main{
     public static void main(String[] args) {
       B obj = new B();
-        System.out.println(obj.meth());
+      obj.meth();
     }
 }
